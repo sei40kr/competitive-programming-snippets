@@ -1,0 +1,34 @@
+# -*- mode: snippet -*-
+# contributor: Translated to yasnippet by sublime-snippet import
+# key: phisieve
+# name: Euler Totient Function Sieve
+# --
+
+const int MAX = 1000001;
+
+vector<int> lp, primes, phi;
+
+void generate_etf() {
+	lp.resize(MAX);
+	phi.rezize(MAX);
+	lp[1] = phi[1] = 1;
+	for (int i = 2; i < MAX; ++i) {
+		if (!lp[i]) {
+			lp[i] = i;
+			phi[i] = i-1;
+			primes.emplace_back(i);
+		}
+		for (int j = 0; j < primes.size(); ++j) {
+			int x = i * primes[j];
+			if (x >= MAX) break;
+			lp[x] = primes[j];
+			if (i % primes[j] == 0) {
+				phi[x] = phi[i] * primes[j];
+				break;
+			}
+			else {
+				phi[x] = phi[i] * (primes[j]-1);
+			}
+		}
+	}
+}
