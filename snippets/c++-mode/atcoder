@@ -37,8 +37,17 @@
 
 #ifdef DEBUG
 #define DEBUG(x) cout << #x << ": " << x << endl
+#define ASSERT(x)                                                            \
+  {                                                                          \
+    if (!(x)) {                                                              \
+      cerr << "Assertion failed at line " << __LINE__ << ": " << #x << " = " \
+           << (x) << "\n";                                                   \
+      exit(1);                                                               \
+    }                                                                        \
+  }
 #else
 #define DEBUG(x)
+#define ASSERT(x)
 #endif
 
 # `(file-name-nondirectory (buffer-file-name))` --- $0
