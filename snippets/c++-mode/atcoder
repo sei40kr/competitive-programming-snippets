@@ -50,18 +50,18 @@
 #define ASSERT(x)
 #endif
 
-# `(file-name-nondirectory (buffer-file-name))` --- $0
-# author: Seong Yong-ju <sei40kr@gmail.com>
+// `(file-name-nondirectory (buffer-file-name))` --- $0
+// author: Seong Yong-ju <sei40kr@gmail.com>
 
 using namespace std;
 
 typedef long long LL;
 typedef long double LD;
-typedef VI vector<int>;
-typedef VLL vector<LL>;
-typedef VVI vector<VI>;
-typedef PII pair<int, int>;
-typedef PLL pair<LL, LL>;
+typedef vector<int> VI;
+typedef vector<LL> VLL;
+typedef vector<VI> VVI;
+typedef pair<int, int> PII;
+typedef pair<LL, LL> PLL;
 
 const int MOD = 1e9 + 7;
 const double PI = acos(-1.0);
