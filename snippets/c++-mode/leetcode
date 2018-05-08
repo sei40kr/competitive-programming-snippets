@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name : Starting template for all the LeetCode problems
-# key: atcoder
+# key: leetcode
 # --
 
 #include <algorithm>
