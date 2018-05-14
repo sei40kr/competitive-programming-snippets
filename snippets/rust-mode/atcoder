@@ -3,57 +3,59 @@
 # key: atcoder
 # --
 
+use std::io::{stdout, BufWriter, StdoutLock};
+
 // `(file-name-nondirectory (buffer-file-name))` --- $0
 // author: Seong Yong-ju <sei40kr@gmail.com>
 
 #[allow(unused_macros)]
 macro_rules! get {
-    ($t:ty) => {
-        {
-            let mut line: String = String::new();
-            stdin().read_line(&mut line).unwrap();
-            line.trim().parse::<$t>().unwrap()
-        }
-    };
-    ($($t:ty),*) => {
-        {
-            let mut line: String = String::new();
-            stdin().read_line(&mut line).unwrap();
-            let mut iter = line.split_whitespace();
-            (
-                $(iter.next().unwrap().parse::<$t>().unwrap(),)*
-            )
-        }
-    };
-    ($t:ty; $n:expr) => {
-        (0..$n).map(|_|
-                    get!($t)
-        ).collect::<Vec<_>>()
-    };
-    ($($t:ty),*; $n:expr) => {
-        (0..$n).map(|_|
-                    get!($($t),*)
-        ).collect::<Vec<_>>()
-    };
-    ($t:ty ;;) => {
-        {
-            let mut line: String = String::new();
-            stdin().read_line(&mut line).unwrap();
-            line.split_whitespace()
-                .map(|t| t.parse::<$t>().unwrap())
-                .collect::<Vec<_>>()
-        }
-    };
-    ($t:ty ;; $n:expr) => {
-        (0..$n).map(|_| get!($t ;;)).collect::<Vec<_>>()
-    };
+  ($t:ty) => {
+    {
+      let mut line: String = String::new();
+      stdin().read_line(&mut line).unwrap();
+      line.trim().parse::<$t>().unwrap()
+    }
+  };
+  ($($t:ty),*) => {
+    {
+      let mut line: String = String::new();
+      stdin().read_line(&mut line).unwrap();
+      let mut iter = line.split_whitespace();
+      (
+        $(iter.next().unwrap().parse::<$t>().unwrap(),)*
+      )
+    }
+  };
+  ($t:ty; $n:expr) => {
+    (0..$n).map(|_|
+                get!($t)
+    ).collect::<Vec<_>>()
+  };
+  ($($t:ty),*; $n:expr) => {
+    (0..$n).map(|_|
+                get!($($t),*)
+    ).collect::<Vec<_>>()
+  };
+  ($t:ty ;;) => {
+    {
+      let mut line: String = String::new();
+      stdin().read_line(&mut line).unwrap();
+      line.split_whitespace()
+        .map(|t| t.parse::<$t>().unwrap())
+        .collect::<Vec<_>>()
+    }
+  };
+  ($t:ty ;; $n:expr) => {
+    (0..$n).map(|_| get!($t ;;)).collect::<Vec<_>>()
+  };
 }
 
 #[allow(unused_macros)]
 macro_rules! debug {
-    ($($a:expr),*) => {
-        eprintln!(concat!($(stringify!($a), " = {:?}, "),*), $($a),*);
-    }
+  ($($a:expr),*) => {
+    eprintln!(concat!($(stringify!($a), " = {:?}, "),*), $($a),*);
+  }
 }
 
 #[allow(dead_code)]
