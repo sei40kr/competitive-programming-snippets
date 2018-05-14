@@ -3,7 +3,7 @@
 # key: atcoder
 # --
 
-use std::io::{stdout, BufWriter, StdoutLock};
+use std::io::{stdin, stdout, BufWriter, StdoutLock};
 
 // `(file-name-nondirectory (buffer-file-name))` --- $0
 // author: Seong Yong-ju <sei40kr@gmail.com>
