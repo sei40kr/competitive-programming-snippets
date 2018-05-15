@@ -3,7 +3,7 @@
 # key: atcoder
 # --
 
-use std::io::{stdin, stdout, BufWriter, StdoutLock};
+use std::io::{stdin, stdout, BufWriter, Read, StdoutLock, Write};
 
 // `(file-name-nondirectory (buffer-file-name))` --- $0
 // author: Seong Yong-ju <sei40kr@gmail.com>
@@ -56,6 +56,19 @@ macro_rules! debug {
   ($($a:expr),*) => {
     eprintln!(concat!($(stringify!($a), " = {:?}, "),*), $($a),*);
   }
+}
+
+#[allow(dead_code)]
+fn read<T: FromStr>() -> T {
+    let stdin = stdin();
+    let stdin = stdin.lock();
+    let token: String = stdin
+        .bytes()
+        .map(|c| c.expect("Failed to read char") as char)
+        .skip_while(|c| c.is_whitespace())
+        .take_while(|c| !c.is_whitespace())
+        .collect();
+    token.parse().ok().expect("Failed to parse token")
 }
 
 #[allow(dead_code)]
