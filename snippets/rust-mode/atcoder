@@ -88,5 +88,7 @@ fn with_bufwriter<F: FnOnce(BufWriter<StdoutLock>) -> ()>(f: F) {
 }
 
 fn main() {
+    with_bufwriter(|mut out| {
 
+    });
 }
