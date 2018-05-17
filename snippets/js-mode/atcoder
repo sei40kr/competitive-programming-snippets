@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name : Starting template for all the AtCoder problems
+# key: atcoder
+# --
+
+function main(input) {
+}
+
+main(require('fs').readFileSync('/dev/stdin', 'utf8'));
