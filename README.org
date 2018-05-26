@@ -1,0 +1,8 @@
+* competitive-programming-snippets
+
+  yasnippet snippets for Competitive Programming.
+
+** Sources
+
+  - [[https://github.com/likecs/Competitive-Coding][Competitive-Coading]] (for Sublime Text)
+  - [[https://github.com/hatoo/competitive-rust-snippets/][competitive-rust-snippets]]
