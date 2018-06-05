@@ -1,0 +1,63 @@
+# name : Binary Search
+# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# key: binarysearch
+# --
+
+use std::cmp::Ordering;
+
+pub trait BinarySearch<T> {
+    fn lower_bound(&self, &T) -> Option<usize>;
+    fn upper_bound(&self, &T) -> Option<usize>;
+}
+
+impl<T: Ord> BinarySearch<T> for [T] {
+    fn lower_bound(&self, x: &T) -> Option<usize> {
+        let len = self.len();
+        let mut low = 0;
+        let mut high = len;
+
+        while low != high {
+            let mid = (low + high) / 2;
+
+            match self[mid].cmp(x) {
+                Ordering::Less => {
+                    low = mid + 1;
+                }
+                Ordering::Equal | Ordering::Greater => {
+                    high = mid;
+                }
+            }
+        }
+
+        if low != len {
+            Some(low)
+        } else {
+            None
+        }
+    }
+
+    fn upper_bound(&self, x: &T) -> Option<usize> {
+        let len = self.len();
+        let mut low = 0;
+        let mut high = self.len();
+
+        while low != high {
+            let mid = (low + high) / 2;
+
+            match self[mid].cmp(x) {
+                Ordering::Less | Ordering::Equal => {
+                    low = mid + 1;
+                }
+                Ordering::Greater => {
+                    high = mid;
+                }
+            }
+        }
+
+        if low != len {
+            Some(low)
+        } else {
+            None
+        }
+    }
+}
