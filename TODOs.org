@@ -1,3 +1,0 @@
-* competitive-programming-snippets
-** Rust
-- Add ~lower_bound~ and ~upper_bound~
