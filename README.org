@@ -2,12 +2,12 @@
 
 * Table of Contents :TOC_4_gh:noexport:
 - [[#description][Description]]
-- [[#sources][Sources]]
+- [[#some-snippets-were-copied-from][Some snippets were copied from:]]
 
 * Description
 yasnippet snippets for Competitive Programming.
 
-* Sources
-- [[https://github.com/likecs/Competitive-Coding][@likecs's Competitive-Coading]] (for Sublime Text)
-- [[https://github.com/hatoo/competitive-rust-snippets/][@hatoo's competitive-rust-snippets]] (for cargo-snippet)
-- [[https://github.com/kenkoooo/competitive-programming-rs][@kenkoooo's competitive-programming-rs]]
+* Some snippets were copied from:
+- [[https://github.com/likecs/Competitive-Coding][likecs/Competitive-Coading]] (Sublime Text snippets)
+- [[https://github.com/hatoo/competitive-rust-snippets/][hatoo/competitive-rust-snippets]] (cargo-snippet snippets)
+- [[https://github.com/kenkoooo/competitive-programming-rs][kenkoooo/competitive-programming-rs]] (cargo-snippet snippets)
