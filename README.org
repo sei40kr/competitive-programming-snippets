@@ -5,7 +5,7 @@
 - [[#some-snippets-were-copied-from][Some snippets were copied from:]]
 
 * Description
-yasnippet snippets for Competitive Programming.
+Competitive Programming snippets for yasnippet.
 
 * Some snippets were copied from:
 - [[https://github.com/likecs/Competitive-Coding][likecs/Competitive-Coading]] (Sublime Text snippets)
