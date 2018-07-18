@@ -1,24 +1,24 @@
-# name : Binary Search
+# -*- mode: snippet -*-
+# name : lower_bound and upper_bound implementations in Rust
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: binarysearch
+# key: binary-search
 # --
 
 use std::cmp::Ordering;
 
+/// Equivalent to std::lowerbound and std::upperbound in c++
 pub trait BinarySearch<T> {
-    fn lower_bound(&self, &T) -> Option<usize>;
-    fn upper_bound(&self, &T) -> Option<usize>;
+    fn lower_bound(&self, &T) -> usize;
+    fn upper_bound(&self, &T) -> usize;
 }
 
 impl<T: Ord> BinarySearch<T> for [T] {
-    fn lower_bound(&self, x: &T) -> Option<usize> {
-        let len = self.len();
+    fn lower_bound(&self, x: &T) -> usize {
         let mut low = 0;
-        let mut high = len;
+        let mut high = self.len();
 
         while low != high {
             let mid = (low + high) / 2;
-
             match self[mid].cmp(x) {
                 Ordering::Less => {
                     low = mid + 1;
@@ -28,22 +28,15 @@ impl<T: Ord> BinarySearch<T> for [T] {
                 }
             }
         }
-
-        if low != len {
-            Some(low)
-        } else {
-            None
-        }
+        low
     }
 
-    fn upper_bound(&self, x: &T) -> Option<usize> {
-        let len = self.len();
+    fn upper_bound(&self, x: &T) -> usize {
         let mut low = 0;
         let mut high = self.len();
 
         while low != high {
             let mid = (low + high) / 2;
-
             match self[mid].cmp(x) {
                 Ordering::Less | Ordering::Equal => {
                     low = mid + 1;
@@ -53,11 +46,6 @@ impl<T: Ord> BinarySearch<T> for [T] {
                 }
             }
         }
-
-        if low != len {
-            Some(low)
-        } else {
-            None
-        }
+        low
     }
 }
