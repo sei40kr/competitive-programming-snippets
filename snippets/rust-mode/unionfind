@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name : kenkoooo's Union Find implementation
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: union-find
+# key: unionfind
 # --
 
 pub struct UnionFind {

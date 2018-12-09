@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name : kenkoooo's Fenwick Tree implementation
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: fenwick-tree
+# key: fenwicktree
 # --
 
 use std::ops::{AddAssign, Sub};

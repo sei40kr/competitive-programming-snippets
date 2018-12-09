@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name : hatoo's Rolling Hash implementation
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: rolling-hash
+# key: rollinghash
 # --
 
 pub struct RollingHash {

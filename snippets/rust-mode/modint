@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name : ModInt struct and impls
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: mod-int
+# key: modint
 # --
 
 use std::ops::{Add, Rem, Sub, Mul};

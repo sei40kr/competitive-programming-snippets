@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name : kenkoooo's Convex Hull implementation
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: convex-hull
+# key: convexhull
 # --
 
 use std;
