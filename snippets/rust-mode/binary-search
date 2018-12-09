@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name : lower_bound and upper_bound implementations in Rust
+# name : hatoo's lower_bound and upper_bound implementations
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
 # key: binary-search
 # --
