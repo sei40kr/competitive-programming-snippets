@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name : kenkoooo's Segment Tree implementation
 # contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: segmenttree
+# key: segtree
 # --
 
 pub struct SegmentTree<T, F> {
