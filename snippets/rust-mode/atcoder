@@ -3,6 +3,15 @@
 # key: atcoder
 # --
 
+#[allow(unused_imports)]
+use std::cmp::{max, min, Ordering};
+#[allow(unused_imports)]
+use std::collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque};
+#[allow(unused_imports)]
+use std::io::{stdin, stdout, BufWriter, Write};
+#[allow(unused_imports)]
+use std::iter::FromIterator;
+
 // `(file-name-nondirectory (buffer-file-name))` --- $0
 // author: Seong Yong-ju <sei40kr@gmail.com>
 
