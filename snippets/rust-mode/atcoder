@@ -69,19 +69,19 @@ fn main() {
     //     n: usize,
     //     m: usize,
     //     mat: [[i32; m]; n],
-    // }
+    // };
 
     // input!{
     //     h: usize,
     //     w: usize,
     //     board: [chars; h],
-    // }
+    // };
 
     // input!{
     //     n: usize,
     //     m: usize,
     //     edges: [(usize1, usize1); m],
-    // }
+    // };
 
     // println!("{}", ans);
 }
