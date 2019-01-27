@@ -8,6 +8,7 @@
 Competitive Programming snippets for yasnippet.
 
 * Some snippets were copied from:
+- [[https://doc.rust-lang.org/std/collections/binary_heap][std::collections::binary_heap]] ― Priority Queue
 - [[https://github.com/likecs/Competitive-Coding][likecs/Competitive-Coading]] (Sublime Text snippets)
 - [[https://github.com/hatoo/competitive-rust-snippets/][hatoo/competitive-rust-snippets]] (cargo-snippet snippets)
 - [[https://github.com/kenkoooo/competitive-programming-rs][kenkoooo/competitive-programming-rs]] (cargo-snippet snippets)
