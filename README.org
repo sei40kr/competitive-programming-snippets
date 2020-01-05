@@ -1,10 +1,10 @@
 #+TITLE: competitive-programming-snippets
 
-* Description
-  Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][yasnippet]].
+** Description
+   Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][yasnippet]].
 
-* Special Thanks
-  - [[https://github.com/kenkoooo/competitive-programming-rs][kenkoooo/competitive-programming-rs]]
-  - [[https://github.com/hatoo/competitive-rust-snippets/][hatoo/competitive-rust-snippets]]
-  - [[https://github.com/tanakh/competitive-rs][tanakah/competitive-rs]]
-  - [[https://github.com/likecs/Competitive-Coding][likecs/Competitive-Coading]]
+** Special Thanks
+   - [[https://github.com/kenkoooo/competitive-programming-rs][kenkoooo/competitive-programming-rs]]
+   - [[https://github.com/hatoo/competitive-rust-snippets/][hatoo/competitive-rust-snippets]]
+   - [[https://github.com/tanakh/competitive-rs][tanakah/competitive-rs]]
+   - [[https://github.com/likecs/Competitive-Coding][likecs/Competitive-Coading]]
