@@ -1,11 +1,14 @@
 # -*- mode: snippet -*-
-# contributor: Translated to yasnippet by sublime-snippet import
-# key: factorisation
-# name: Pollard rho brent factorisation method
+# name: factorise
+# contributor: Bhuvnesh Jain
+# key: factorise
 # --
 
+#Pollard-Rho-Brent Integer factorisation
+#Complexity: O(n^(1/4) * log2(n))
+
 import random
-from queue import *
+from Queue import Queue
 
 def gcd(a,b):
 	while b:
@@ -41,6 +44,7 @@ def sieve():
 				i+=k
 		j+=2
 
+#checks if p is prime or not
 def rabin_miller(p):
 	if(p<100000):
 		return primes[p]==p
@@ -49,7 +53,7 @@ def rabin_miller(p):
 	s=p-1
 	while(s%2==0):
 		s>>=1
-	for i in range(5):
+	for i in xrange(5):
 		a=random.randrange(p-1)+1
 		temp=s
 		mod=pow(a,temp,p)
@@ -60,6 +64,7 @@ def rabin_miller(p):
 			return False
 	return True
 
+#returns a prime factor of N
 def brent(N):
 	if(N%2==0):
 		return 2
@@ -88,7 +93,7 @@ def brent(N):
 				break
 	return g
 
-def factor(n):
+def factorise(n):
 	Q_1=Queue()
 	Q_2=[]
 	Q_1.put(n)
@@ -105,20 +110,16 @@ def factor(n):
 			Q_1.put(l//d)
 	return Q_2
 
-def calc(n):
-	L = factor(n)
-	L.sort()
-	i = 0
-	while(i < len(L)):
-		cnt = L.count(L[i])
-		print ("%s^%s"%(L[i],cnt), end = " ")
-		i += cnt
-	print()
 
-if __name__ == "__main__":
-	sieve()
-	t = int(input())
-	while (t > 0) :
-		n = int(input())
-		calc(n)
-		t -= 1
+sieve()
+t=int(input())
+for _ in range(t):
+	n=int(input())
+	L=factorise(n)
+	L.sort()
+	i=0
+	while(i<len(L)):
+		cnt=L.count(L[i])
+		print "%s^%s"%(L[i],cnt),
+		i+=cnt
+	print
