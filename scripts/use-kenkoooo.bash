@@ -11,19 +11,18 @@ cd "$(dirname "$0")/.."
 tmpdir="$(mktemp -d "${TMPDIR:-/tmp/}competitive-programming-rs-XXXXXXXXXX")"
 git clone https://github.com/kenkoooo/competitive-programming-rs "$tmpdir"
 
+echo
+echo 'Importing snippets from kenkoooo/competitive-programming-rs ...'
+echo
+
 find "${tmpdir}/src" \
      -mindepth 1 \
      -maxdepth 1 \
      -type d \
      ! -name 'utils' \
      -printf "%f\n" |
-    while read -r group; do
-        group="${group//_/ }"
-        mkdir -p "snippets/rust-mode/${group}"
-    done
-
-echo 'Importing snippets from kenkoooo/competitive-programming-rs ...'
-echo
+    tr '_' ' ' |
+    xargs -I{} mkdir -p 'snippets/rust-mode/{}'
 
 find "${tmpdir}/src" \
      -mindepth 2 \
