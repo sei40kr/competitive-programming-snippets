@@ -1,4 +1,31 @@
-;;; competitive-programming-snippets.el --- Competitive programming snippets for yasnippet.
+;;; competitive-programming-snippets.el --- Competitive Programming snippets for Yasnippet -*- lexical-binding: t -*-
+
+;; Author: Seong Yong-ju <sei40kr@gmail.com>
+;; Version: 1.0.0
+;; URL: https://github.com/sei40kr/competitive-programming-snippets
+;; Package-Requires: ((emacs "26") (yasnippet "0.8.0"))
+;; Keywords: tools
+
+;; This file is not part of GNU Emacs
+
+;; This file is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 3, or (at your option)
+;; any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; For a full copy of the GNU General Public License
+;; see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; Competitive Programming snippets for Yasnippet.
+
+;;; Code:
 
 (require 'yasnippet)
 
@@ -12,12 +39,16 @@
       byte-compile-current-file)
      (:else (buffer-file-name))))))
 
+;;;###autoload
 (defun competitive-programming-snippets-initialize ()
+  "Load the `competitive-programming-snippets' snippets directory."
+  ;; NOTE: we add the symbol `competitive-programming-snippets-dir' rather than
+  ;; its value, so that yasnippet will automatically find the directory
+  ;; after this package is updated (i.e., moves directory).
   (add-to-list 'yas-snippet-dirs 'competitive-programming-snippets-dir t)
   (yas-load-directory competitive-programming-snippets-dir t))
 
-(eval-after-load 'yasnippet
-  '(competitive-programming-snippets-initialize))
+(competitive-programming-snippets-initialize)
 
 (provide 'competitive-programming-snippets)
 
