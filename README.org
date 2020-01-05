@@ -4,7 +4,9 @@
    Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][yasnippet]].
 
 ** Special Thanks
-   - [[https://github.com/kenkoooo/competitive-programming-rs][kenkoooo/competitive-programming-rs]]
-   - [[https://github.com/hatoo/competitive-rust-snippets/][hatoo/competitive-rust-snippets]]
-   - [[https://github.com/tanakh/competitive-rs][tanakah/competitive-rs]]
+   I translated some snippets to Yasnippet from these repositories:
+
+   - [[https://github.com/kenkoooo/competitive-programming-rs][kenkoooo/competitive-programming-rs]] - MIT License
+   - [[https://github.com/hatoo/competitive-rust-snippets/][hatoo/competitive-rust-snippets]] - MIT License
+   - [[https://github.com/tanakh/competitive-rs][tanakah/competitive-rs]] - MIT License
    - [[https://github.com/likecs/Competitive-Coding][likecs/Competitive-Coading]]
