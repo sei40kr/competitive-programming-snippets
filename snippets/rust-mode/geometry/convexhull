@@ -1,10 +1,8 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's Convex Hull
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# name: convex hull
+# contributor: Nakamura Kenko
 # key: convexhull
 # --
-
-use std;
 
 pub fn extract_convex_hull(points: &Vec<Point>, contain_on_segment: bool) -> Vec<usize> {
     let n = points.len();
@@ -75,3 +73,4 @@ impl Point {
         self.x * other.y - self.y * other.x
     }
 }
+

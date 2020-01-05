@@ -1,9 +1,10 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's Segment Tree implementation
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: segtree
+# name: segment tree
+# contributor: Nakamura Kenko
+# key: segmenttree
 # --
 
+/// Segment Tree for range queries
 pub struct SegmentTree<T, F> {
     seg: Vec<T>,
     n: usize,
@@ -60,3 +61,4 @@ where
         }
     }
 }
+

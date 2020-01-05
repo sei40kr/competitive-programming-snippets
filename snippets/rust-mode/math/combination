@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's combination implementations
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# name: combination
+# contributor: Nakamura Kenko
 # key: combination
 # --
 
@@ -21,11 +21,17 @@ impl Combination {
         }
         fact[0] = 1;
         inv_fact[0] = 1;
-        for i in 0..max { fact[i + 1] = fact[i] * (i + 1) % modulo; }
+        for i in 0..max {
+            fact[i + 1] = fact[i] * (i + 1) % modulo;
+        }
         for i in 0..max {
             inv_fact[i + 1] = inv_fact[i] * inv[i + 1] % modulo;
         }
-        Combination { fact: fact, inv_fact: inv_fact, modulo: modulo }
+        Combination {
+            fact: fact,
+            inv_fact: inv_fact,
+            modulo: modulo,
+        }
     }
 
     pub fn get(&self, x: usize, y: usize) -> usize {
@@ -37,3 +43,4 @@ impl Combination {
         self.get(n + r - 1, r)
     }
 }
+

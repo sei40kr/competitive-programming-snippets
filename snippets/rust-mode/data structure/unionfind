@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's Union Find
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# name: union find
+# contributor: Nakamura Kenko
 # key: unionfind
 # --
 
@@ -49,3 +49,4 @@ impl UnionFind {
         return true;
     }
 }
+

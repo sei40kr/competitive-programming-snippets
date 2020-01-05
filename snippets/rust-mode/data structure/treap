@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's Treap
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# name: treap
+# contributor: Nakamura Kenko
 # key: treap
 # --
 
@@ -34,7 +34,7 @@ pub mod treap {
         }
     }
 
-    /// \`Treap\` is a binary search tree data structure that maintain a dynamic set
+    /// `Treap` is a binary search tree data structure that maintain a dynamic set
     /// of ordered keys and allow binary searches among the keys,
     /// [https://en.wikipedia.org/wiki/Treap](https://en.wikipedia.org/wiki/Treap)
     #[derive(Debug)]
@@ -236,3 +236,4 @@ pub mod treap {
         x
     }
 }
+

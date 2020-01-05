@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's LCA
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# name: lca
+# contributor: Nakamura Kenko
 # key: lca
 # --
 
@@ -98,3 +98,4 @@ impl LowestCommonAncestor {
         self.depth[u] + self.depth[v] - self.depth[lca] * 2
     }
 }
+

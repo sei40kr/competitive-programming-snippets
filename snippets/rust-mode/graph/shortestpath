@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's Bellman-Ford
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
-# key: bellmanford
+# name: shortest path
+# contributor: Nakamura Kenko
+# key: shortestpath
 # --
 
 pub mod bellman_ford {
@@ -45,3 +45,4 @@ pub mod bellman_ford {
         return (dist, negative);
     }
 }
+

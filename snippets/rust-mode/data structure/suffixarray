@@ -1,11 +1,8 @@
 # -*- mode: snippet -*-
-# name : kenkoooo's Suffix Array
-# contributor : Seong Yong-ju <sei40kr@gmail.com>
+# name: suffix array
+# contributor: Nakamura Kenko
 # key: suffixarray
 # --
-
-use std::cmp;
-use std::cmp::Ordering;
 
 pub struct SuffixArray {
     n: usize,
@@ -13,7 +10,7 @@ pub struct SuffixArray {
     array: Vec<usize>,
 }
 
-fn compare_node(i: usize, j: usize, k: usize, rank: &Vec<i32>) -> Ordering {
+fn compare_node(i: usize, j: usize, k: usize, rank: &Vec<i32>) -> std::cmp::Ordering {
     if rank[i] != rank[j] {
         rank[i].cmp(&rank[j])
     } else {
@@ -42,7 +39,8 @@ impl SuffixArray {
             tmp[array[0]] = 0;
             for i in 1..(n + 1) {
                 tmp[array[i]] = tmp[array[i - 1]]
-                    + if compare_node(array[i - 1], array[i], k, &rank) == Ordering::Less {
+                    + if compare_node(array[i - 1], array[i], k, &rank) == std::cmp::Ordering::Less
+                    {
                         1
                     } else {
                         0
@@ -67,9 +65,9 @@ impl SuffixArray {
             false
         } else {
             let start = self.array[b];
-            let end = cmp::min(t.len() + start, self.s.len());
+            let end = std::cmp::min(t.len() + start, self.s.len());
             let sub = &self.s[start..end];
-            sub.cmp(t) == Ordering::Equal
+            sub.cmp(t) == std::cmp::Ordering::Equal
         }
     }
 
@@ -81,7 +79,7 @@ impl SuffixArray {
         while b - a > 1 {
             let c = (a + b) / 2;
             let start = self.array[c as usize];
-            let end = cmp::min(start + t.len(), self.s.len());
+            let end = std::cmp::min(start + t.len(), self.s.len());
             let sub = &self.s[start..end];
             if f(sub, t) {
                 a = c;
@@ -93,12 +91,13 @@ impl SuffixArray {
     }
 
     pub fn lower_bound(&self, t: &Vec<u8>) -> usize {
-        let check_function = |sub: &[u8], s: &Vec<u8>| sub.cmp(s) == Ordering::Less;
+        let check_function = |sub: &[u8], s: &Vec<u8>| sub.cmp(s) == std::cmp::Ordering::Less;
         self.binary_search(t, check_function)
     }
 
     pub fn upper_bound(&self, t: &Vec<u8>) -> usize {
-        let check_function = |sub: &[u8], s: &Vec<u8>| sub.cmp(s) != Ordering::Greater;
+        let check_function = |sub: &[u8], s: &Vec<u8>| sub.cmp(s) != std::cmp::Ordering::Greater;
         self.binary_search(t, check_function)
     }
 }
+
