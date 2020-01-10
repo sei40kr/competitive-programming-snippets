@@ -3,6 +3,16 @@
 ** Description
    Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][yasnippet]].
 
+** Usage
+   Call =competitive-programming-snippets-initialize= after =yasnippet= loaded.
+
+   #+BEGIN_SRC emacs-lisp
+     (require 'yasnippet)
+     (require 'competitive-programming-snippets)
+
+     (competitive-programming-snippets)
+   #+END_SRC
+
 ** Special Thanks
    I translated some snippets to Yasnippet from these repositories:
 
