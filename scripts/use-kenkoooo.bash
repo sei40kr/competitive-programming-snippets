@@ -7,14 +7,18 @@ IFS=$'\n\t'
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 cd "$(dirname "$0")/.."
+# shellcheck source=../script_helpers/simple-tui/simple-tui.bash
+. script_helpers/simple-tui/simple-tui.bash
 
+# clone repository
+tui_info "Cloning kenkoooo/competitive-programming-rs..."
 tmpdir="$(mktemp -d "${TMPDIR:-/tmp/}competitive-programming-rs-XXXXXXXXXX")"
-git clone https://github.com/kenkoooo/competitive-programming-rs "$tmpdir"
+git clone -q https://github.com/kenkoooo/competitive-programming-rs "$tmpdir"
 
-echo
-echo 'Importing snippets from kenkoooo/competitive-programming-rs ...'
-echo
 
+tui_group "Importing kenkoooo's snippets..."
+
+# create group directories
 find "${tmpdir}/src" \
      -mindepth 1 \
      -maxdepth 1 \
@@ -24,6 +28,7 @@ find "${tmpdir}/src" \
     tr '_' ' ' |
     xargs -I{} mkdir -p 'snippets/rust-mode/{}'
 
+# create snippets
 find "${tmpdir}/src" \
      -mindepth 2 \
      -maxdepth 2 \
@@ -38,8 +43,6 @@ find "${tmpdir}/src" \
         name="${name//_/ }"
         key="${name// }"
 
-        echo -n " • ${group}/${key}"
-
         {
             echo '# -*- mode: snippet -*-'
             echo "# name: ${name}"
@@ -50,7 +53,13 @@ find "${tmpdir}/src" \
             sed -n '/^#\[cfg(test)\]/q;p' "$abspath"
         } >"snippets/rust-mode/${group}/${key}"
 
-        echo ' ... imported'
+        tui_done "Imported ${group}/${key}"
     done
 
+tui_group_end
+
+
+# clean up
 rm -rf "$tmpdir"
+
+tui_done 'Done'

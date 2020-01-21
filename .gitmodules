@@ -1,0 +1,3 @@
+[submodule "script_helpers/simple-tui"]
+	path = script_helpers/simple-tui
+	url = https://github.com/sei40kr/simple-tui.git

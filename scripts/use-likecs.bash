@@ -7,17 +7,18 @@ IFS=$'\n\t'
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 cd "$(dirname "$0")/.."
+# shellcheck source=../script_helpers/simple-tui/simple-tui.bash
+. script_helpers/simple-tui/simple-tui.bash
 
+# clone repository
+tui_info 'Cloning likecs/Competitive-Coding...'
 tmpdir="$(mktemp -d "${TMPDIR:-/tmp/}Competitive-Coding-XXXXXXXXXX")"
-git clone https://github.com/likecs/Competitive-Coding "$tmpdir"
+git clone -q https://github.com/likecs/Competitive-Coding "$tmpdir"
 
 
-## C
+tui_group 'Importing C snippets...'
 
-echo
-echo 'Importing C snippets from likecs/Competitive-Coding ...'
-echo
-
+# create group directories for c
 find "${tmpdir}/C" \
      -mindepth 1 \
      -maxdepth 1 \
@@ -26,6 +27,7 @@ find "${tmpdir}/C" \
     tr '[:upper:]' '[:lower:]' |
     xargs -I{} mkdir -p 'snippets/c-mode/{}'
 
+# create c snippets
 find "${tmpdir}/C" \
      -mindepth 2 \
      -type f \
@@ -39,8 +41,6 @@ find "${tmpdir}/C" \
         key="${name// }"
         key="$(tr '[:upper:]' '[:lower:]' <<<"$key")"
 
-        echo -n " • ${group}/${key}"
-
         {
             echo '# -*- mode: snippet -*-'
             echo "# name: ${name}"
@@ -51,16 +51,15 @@ find "${tmpdir}/C" \
             cat "$abspath"
         } >"snippets/c-mode/${group}/${key}"
 
-        echo ' ... imported'
+        tui_done "Imported ${group}/${key}"
     done
 
+tui_group_end
 
-## C++
 
-echo
-echo 'Importing C++ snippets from likecs/Competitive-Coding ...'
-echo
+tui_group 'Importing C++ snippets...'
 
+# create group directories for c++
 find "${tmpdir}/C++14" \
      -mindepth 1 \
      -maxdepth 1 \
@@ -69,6 +68,7 @@ find "${tmpdir}/C++14" \
     tr '[:upper:]' '[:lower:]' |
     xargs -I{} mkdir -p 'snippets/c++-mode/{}'
 
+# create c++ snippets
 find "${tmpdir}/C++14" \
      -mindepth 2 \
      -type f \
@@ -82,8 +82,6 @@ find "${tmpdir}/C++14" \
         key="${name// }"
         key="$(tr '[:upper:]' '[:lower:]' <<<"$key")"
 
-        echo -n " • ${group}/${key}"
-
         {
             echo '# -*- mode: snippet -*-'
             echo "# name: ${name}"
@@ -94,16 +92,15 @@ find "${tmpdir}/C++14" \
             cat "$abspath"
         } >"snippets/c++-mode/${group}/${key}"
 
-        echo ' ... imported'
+        tui_done "Imported ${group}/${key}"
     done
 
+tui_group_end
 
-## Python 3
 
-echo
-echo 'Importing Python snippets from likecs/Competitive-Coding ...'
-echo
+tui_group 'Importing Python snippets...'
 
+# create group directories for python
 find "${tmpdir}/Python3" \
      -mindepth 1 \
      -maxdepth 1 \
@@ -112,6 +109,7 @@ find "${tmpdir}/Python3" \
     tr '[:upper:]' '[:lower:]' |
     xargs -I{} mkdir -p 'snippets/python-mode/{}'
 
+# create snippets
 find "${tmpdir}/Python3" \
      -mindepth 2 \
      -type f \
@@ -125,8 +123,6 @@ find "${tmpdir}/Python3" \
         key="${name// }"
         key="$(tr '[:upper:]' '[:lower:]' <<<"$key")"
 
-        echo -n " • ${group}/${key}"
-
         {
             echo '# -*- mode: snippet -*-'
             echo "# name: ${name}"
@@ -137,7 +133,13 @@ find "${tmpdir}/Python3" \
             cat "$abspath"
         } >"snippets/python-mode/${group}/${key}"
 
-        echo ' ... imported'
+        tui_done "Imported ${group}/${key}"
     done
 
+tui_group_end
+
+
+# clean up
 rm -rf "$tmpdir"
+
+tui_done 'Done'
