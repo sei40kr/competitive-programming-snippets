@@ -22,7 +22,10 @@ pub mod mod_int {
 
     impl Add<Num> for ModInt<Num> {
         type Output = ModInt<Num>;
-        fn add(self, rhs: Num) -> ModInt<Num> {
+        fn add(self, mut rhs: Num) -> ModInt<Num> {
+            if rhs >= MOD {
+                rhs %= MOD;
+            }
             let mut t = rhs + self.0;
             if t >= MOD {
                 t = t - MOD;
@@ -72,7 +75,10 @@ pub mod mod_int {
 
     impl Div<Num> for ModInt<Num> {
         type Output = ModInt<Num>;
-        fn div(self, rhs: Num) -> ModInt<Num> {
+        fn div(self, mut rhs: Num) -> ModInt<Num> {
+            if rhs >= MOD {
+                rhs %= MOD;
+            }
             self * ModInt(rhs).pow(MOD - 2)
         }
     }
@@ -105,7 +111,10 @@ pub mod mod_int {
     impl Mul<Num> for ModInt<Num> {
         type Output = ModInt<Num>;
 
-        fn mul(self, rhs: Num) -> ModInt<Num> {
+        fn mul(self, mut rhs: Num) -> ModInt<Num> {
+            if rhs >= MOD {
+                rhs %= MOD;
+            }
             let t = (self.0 * rhs) % MOD;
             ModInt(t)
         }
