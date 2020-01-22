@@ -10,7 +10,7 @@
      (require 'yasnippet)
      (require 'competitive-programming-snippets)
 
-     (competitive-programming-snippets)
+     (competitive-programming-snippets-initialize)
    #+END_SRC
 
 ** Special Thanks
