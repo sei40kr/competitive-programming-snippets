@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: modint
 # --
-
 pub mod mod_int {
     use std::ops::{Add, AddAssign, Div, DivAssign, Mul, MulAssign, Sub, SubAssign};
 

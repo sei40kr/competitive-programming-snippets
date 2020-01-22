@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: stronglyconnectedcomponents
 # --
-
 pub mod strongly_connected_components {
     use std::collections::VecDeque;
 

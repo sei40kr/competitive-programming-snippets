@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: bitset
 # --
-
 pub mod bitset {
     const ONE_VALUE_LENGTH: usize = 63;
     const MAXIMUM: u64 = (1u64 << ONE_VALUE_LENGTH as u64) - 1;

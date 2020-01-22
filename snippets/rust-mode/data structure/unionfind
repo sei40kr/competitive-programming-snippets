@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: unionfind
 # --
-
 pub struct UnionFind {
     parent: Vec<usize>,
     sizes: Vec<usize>,

@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: combination
 # --
-
 pub struct Combination {
     fact: Vec<usize>,
     inv_fact: Vec<usize>,

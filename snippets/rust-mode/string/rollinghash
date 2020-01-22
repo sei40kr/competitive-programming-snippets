@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: rollinghash
 # --
-
 pub struct RollingHash {
     hash: Vec<u64>,
     pow: Vec<u64>,

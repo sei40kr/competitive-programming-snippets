@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: fibonacciheap
 # --
-
 pub mod fibonacci_heap {
 
     fn store_to_map<T, F>(

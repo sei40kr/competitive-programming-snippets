@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: minimumboundingcircle
 # --
-
 pub mod minimum_bounding_circle {
     pub fn make_circle(ps: &[Point<f64>]) -> (Point<f64>, f64) {
         let n = ps.len();

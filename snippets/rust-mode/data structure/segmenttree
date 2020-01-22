@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: segmenttree
 # --
-
 /// Segment Tree for range queries
 pub struct SegmentTree<T, F> {
     seg: Vec<T>,

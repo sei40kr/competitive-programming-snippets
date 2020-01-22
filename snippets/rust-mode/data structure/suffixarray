@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: suffixarray
 # --
-
 pub struct SuffixArray {
     n: usize,
     s: Vec<u8>,

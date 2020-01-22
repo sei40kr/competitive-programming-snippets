@@ -3,7 +3,6 @@
 # contributor: Bhuvnesh Jain
 # key: primesieve
 # --
-
 #prime sieve where prime[i] stores a prime factor of i
 
 primes=[0]*1000000

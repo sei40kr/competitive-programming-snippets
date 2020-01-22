@@ -3,7 +3,6 @@
 # contributor: Bhuvnesh Jain
 # key: basics
 # --
-
 #returns (a + b) mod c
 def add(a,b,c):
 	res=a+b

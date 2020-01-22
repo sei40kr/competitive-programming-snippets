@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: zalgorithm
 # --
-
 pub mod z_algorithm {
 
     pub fn calc_z_array<T: PartialEq>(s: &[T]) -> Vec<usize> {

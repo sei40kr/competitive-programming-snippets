@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: rangeaddsegmenttree
 # --
-
 pub mod range_add_segment_tree {
 
     pub struct RangeAddSegmentTree<T, F> {

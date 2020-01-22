@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: chineseremaindertheorem
 # --
-
 pub fn extended_gcd(a: i64, b: i64, p: &mut i64, q: &mut i64) -> i64 {
     if b == 0 {
         *p = 1;

@@ -129,7 +129,6 @@ find "${tmpdir}/Python3" \
             echo '# contributor: Bhuvnesh Jain'
             echo "# key: ${key}"
             echo '# --'
-            echo
             cat "$abspath"
         } >"snippets/python-mode/${group}/${key}"
 

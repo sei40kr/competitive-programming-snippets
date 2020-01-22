@@ -3,7 +3,6 @@
 # contributor: Bhuvnesh Jain
 # key: 64bit-fftmod
 # --
-
 # Taken from min_25 submission's on some problem in hackerrank.
 # It uses 64-bit fft and is extremely fast
 # almost comparable to C++ codes.

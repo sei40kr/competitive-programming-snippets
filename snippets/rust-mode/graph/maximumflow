@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: maximumflow
 # --
-
 pub mod dinitz {
     use std::cmp;
     use std::collections::VecDeque;

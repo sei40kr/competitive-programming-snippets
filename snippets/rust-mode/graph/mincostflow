@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: mincostflow
 # --
-
 pub mod primal_dual {
     use std::cmp;
     use std::collections::BinaryHeap;

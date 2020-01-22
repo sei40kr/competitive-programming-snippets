@@ -49,7 +49,6 @@ find "${tmpdir}/src" \
             echo '# contributor: Nakamura Kenko'
             echo "# key: ${key}"
             echo '# --'
-            echo
             sed -n '/^#\[cfg(test)\]/q;p' "$abspath"
         } >"snippets/rust-mode/${group}/${key}"
 

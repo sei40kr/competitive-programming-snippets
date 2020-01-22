@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: shortestpath
 # --
-
 pub mod bellman_ford {
     pub fn shortest_path(
         graph: &Vec<Vec<(usize, i64)>>,

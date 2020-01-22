@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: sparsetable
 # --
-
 pub mod sparse_table {
 
     pub struct SparseTable<T, F> {

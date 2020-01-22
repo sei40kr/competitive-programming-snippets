@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: lca
 # --
-
 use std::collections::VecDeque;
 
 const MAX_PARENT: usize = 1 << 50;

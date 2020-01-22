@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: fenwicktree
 # --
-
 pub mod fenwick_tree {
     /// `FenwickTree` is a data structure that can efficiently update elements
     /// and calculate prefix sums in a table of numbers.

@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: cumulativesum
 # --
-
 pub struct CumulativeSum<T> {
     ny: usize,
     nx: usize,

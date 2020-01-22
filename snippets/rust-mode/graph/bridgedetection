@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: bridgedetection
 # --
-
 pub struct BridgeDetector {
     articulations: Vec<usize>,
     bridges: Vec<(usize, usize)>,

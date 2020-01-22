@@ -3,7 +3,6 @@
 # contributor: Nakamura Kenko
 # key: maxrectangle
 # --
-
 pub mod max_rectangle {
     use std::cmp;
     use std::collections::VecDeque;
