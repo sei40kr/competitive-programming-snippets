@@ -1,5 +1,7 @@
 #+TITLE: competitive-programming-snippets
 
+[[https://melpa.org/#/competitive-programming-snippets][file:https://melpa.org/packages/competitive-programming-snippets-badge.svg]]
+
 ** Description
    Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][yasnippet]].
 
