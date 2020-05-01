@@ -18,7 +18,7 @@
 ** Special Thanks
    I translated some snippets to Yasnippet from these repositories:
 
-   - [[https://github.com/kenkoooo/competitive-programming-rs][kenkoooo/competitive-programming-rs]] - MIT License
+   - [[https://github.com/kenkoooo/competitive-programming-rs][Competitive Programming Snippets in Rust]] - CC0-1.0
    - [[https://github.com/hatoo/competitive-rust-snippets/][hatoo/competitive-rust-snippets]] - MIT License
    - [[https://github.com/tanakh/competitive-rs][tanakah/competitive-rs]] - MIT License
    - [[https://github.com/likecs/Competitive-Coding][likecs/Competitive-Coading]]
