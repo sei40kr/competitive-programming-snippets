@@ -1,7 +1,7 @@
-;;; competitive-programming-snippets.el --- Competitive Programming snippets for Yasnippet -*- lexical-binding: t -*-
+;;; competitive-programming-snippets.el --- Competitive Programming snippets for yasnippet -*- lexical-binding: t -*-
 
 ;; Author: Seong Yong-ju <sei40kr@gmail.com>
-;; Version: 1.1.5
+;; Version: 1.1.6
 ;; URL: https://github.com/sei40kr/competitive-programming-snippets
 ;; Package-Requires: ((emacs "26") (yasnippet "0.8.0"))
 ;; Keywords: tools
@@ -23,21 +23,20 @@
 
 ;;; Commentary:
 
-;; Competitive Programming snippets for Yasnippet.
+;; Competitive Programming snippets for yasnippet
 
 ;;; Code:
 
 (require 'yasnippet)
 
 (defconst competitive-programming-snippets-dir
-  (expand-file-name
-   "snippets"
-   (file-name-directory
-    (cond
-     (load-in-progress load-file-name)
-     ((and (boundp 'byte-compile-current-file) byte-compile-current-file)
-      byte-compile-current-file)
-     (:else (buffer-file-name))))))
+  (let* ((basedir (file-name-directory
+                   (cond (load-in-progress load-file-name)
+                         ((and (boundp 'byte-compile-current-file)
+                               byte-compile-current-file)
+                          byte-compile-current-file)
+                         (:else (buffer-file-name))))))
+    (expand-file-name "snippets" basedir)))
 
 ;;;###autoload
 (defun competitive-programming-snippets-initialize ()
