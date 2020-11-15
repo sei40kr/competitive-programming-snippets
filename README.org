@@ -3,21 +3,38 @@
 [[https://melpa.org/#/competitive-programming-snippets][file:https://melpa.org/packages/competitive-programming-snippets-badge.svg]]
 
 ** Description
-   Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][yasnippet]].
+Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][yasnippet]].
 
-** Usage
-   Call =competitive-programming-snippets-initialize= after =yasnippet= loaded.
+** Install
+*** Manual Install
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/path/to/competitive-programming-snippets")
+(require 'yasnippet)
+(require 'competitive-programming-snippets)
 
-   #+BEGIN_SRC emacs-lisp
-     (require 'yasnippet)
-     (require 'competitive-programming-snippets)
+;; Make sure to call `competitive-programming-snippets-initialize' after
+;; yasnippet loaded.
+(competitive-programming-snippets-initialize)
+#+END_SRC
 
-     (competitive-programming-snippets-initialize)
-   #+END_SRC
+*** Doom Emacs
+Add in your =$DOOMDIR/packages.el=:
+
+#+BEGIN_SRC emacs-lisp
+(package! competitive-programming-snippets)
+#+END_SRC
+
+and then, add your =$DOOMDIR/config.el=:
+
+#+BEGIN_SRC emacs-lisp
+(after! competitive-programming-snippets
+  (competitive-programming-snippets-initialize))
+#+END_SRC
+
+** References
+- [[https://qiita.com/tanakh/items/0ba42c7ca36cd29d0ac8][Rustで競技プログラミングの入力をスッキリ記述するマクロ - Qiita]]
 
 ** License
 GPL-3.0
 
-- [[https://github.com/kenkoooo/competitive-programming-rs][Competitive Programming Snippets in Rust]] - CC0-1.0
 - [[https://github.com/hatoo/competitive-rust-snippets/][My Rust snippets for competitive programming]] - MIT
-- [[https://github.com/tanakh/competitive-rs][competitive-rs]] - MIT
