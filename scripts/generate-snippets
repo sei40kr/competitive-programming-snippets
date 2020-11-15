@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+basedir="$(cd "$(dirname "$0")/.." && pwd)"
+
+# cf https://twitter.com/kenkoooo/status/1186609552348725253
+use_kenkoooo() {
+  grep -lr '# contributor: Nakamura Kenko' "${basedir}/snippets" |
+    while read -r file; do
+      rm -f "$file"
+    done
+
+  local -A group_translations=(
+    ['data_structure']='Data Structure'
+    ['geometry']='Geometry'
+    ['graph']='Graph'
+    ['math']='Math'
+    ['string']='String'
+  )
+
+  for old_group in "${!group_translations[@]}"; do
+    new_group="${group_translations[$old_group]}"
+
+    mkdir -p "${basedir}/snippets/rust-mode/${new_group}"
+
+    find "${basedir}/competitive-programming-rs/src/${old_group}" \
+      -type f \
+      -name '*.rs' -a ! -name 'mod.rs' |
+      while read -r file; do
+        name="${file##*/}"
+        name="${name%.rs}"
+        key="${name//_/}"
+        name="${name//_/ }"
+
+        {
+          cat <<EOM
+# -*- mode: snippet -*-
+# name: ${name}
+# contributor: Nakamura Kenko
+# key: ${key}
+# --
+
+EOM
+          sed -n '/^#\[cfg(test)\]/q;p' "$file"
+        } >"snippets/rust-mode/${new_group}/${key}"
+      done
+  done
+}
+
+use_kenkoooo
