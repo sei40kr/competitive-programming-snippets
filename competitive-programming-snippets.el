@@ -1,7 +1,7 @@
 ;;; competitive-programming-snippets.el --- Competitive Programming snippets for yasnippet -*- lexical-binding: t -*-
 
 ;; Author: Seong Yong-ju <sei40kr@gmail.com>
-;; Version: 1.1.6
+;; Version: 2.0.0
 ;; URL: https://github.com/sei40kr/competitive-programming-snippets
 ;; Package-Requires: ((emacs "26") (yasnippet "0.8.0"))
 ;; Keywords: tools
