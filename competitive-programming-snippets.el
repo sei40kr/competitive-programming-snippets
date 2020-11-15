@@ -1,7 +1,7 @@
 ;;; competitive-programming-snippets.el --- Competitive Programming snippets for yasnippet -*- lexical-binding: t -*-
 
 ;; Author: Seong Yong-ju <sei40kr@gmail.com>
-;; Version: 2.0.0
+;; Version: 2.0.1
 ;; URL: https://github.com/sei40kr/competitive-programming-snippets
 ;; Package-Requires: ((emacs "26") (yasnippet "0.8.0"))
 ;; Keywords: tools
@@ -39,7 +39,7 @@
     (expand-file-name "snippets" basedir)))
 
 ;;;###autoload
-(defun competitive-programming-snippets-initialize ()
+(defun competitive-programming-snippets-init ()
   "Load the `competitive-programming-snippets' snippets directory."
   ;; NOTE: we add the symbol `competitive-programming-snippets-dir' rather than
   ;; its value, so that yasnippet will automatically find the directory

@@ -12,9 +12,9 @@ Competitive Programming snippets for [[https://github.com/joaotavora/yasnippet][
 (require 'yasnippet)
 (require 'competitive-programming-snippets)
 
-;; Make sure to call `competitive-programming-snippets-initialize' after
+;; Make sure to call `competitive-programming-snippets-init' after
 ;; yasnippet loaded.
-(competitive-programming-snippets-initialize)
+(competitive-programming-snippets-init)
 #+END_SRC
 
 *** Doom Emacs
@@ -28,7 +28,7 @@ and then, add your =$DOOMDIR/config.el=:
 
 #+BEGIN_SRC emacs-lisp
 (after! competitive-programming-snippets
-  (competitive-programming-snippets-initialize))
+  (competitive-programming-snippets-init))
 #+END_SRC
 
 ** References
